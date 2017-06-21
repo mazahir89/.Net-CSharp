@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Home.master.cs" Inherits="Home" %>
+
+<%@ Register src="LeftMenuControl.ascx" tagname="LeftMenuControl" tagprefix="uc1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            text-align: center;
+        }
+        .auto-style2 {
+            width: 84px;
+        }
+        .auto-style3 {
+            width: 912px;
+        }
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+        <table style="width:100%;">
+            <tr>
+                <td class="auto-style1" colspan="3">Automobile</td>
+            </tr>
+            <tr>
+                <td class="auto-style2">
+                    <uc1:LeftMenuControl ID="LeftMenuControl1" runat="server" />
+                </td>
+                <td class="auto-style3" style="vertical-align:top">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+                <td style="vertical-align:top">
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="ShoppingCart.aspx">Cart</asp:HyperLink>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: center">automobiles.com</td>
+            </tr>
+        </table>
+        
+    </div>
+    </form>
+</body>
+</html>
